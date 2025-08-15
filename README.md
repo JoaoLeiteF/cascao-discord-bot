@@ -43,7 +43,7 @@ npm install
 
 ### 4. Configure o token
 
-Substitua `'COLE_SEU_TOKEN_AQUI'` no arquivo `bot.js` pelo token do seu bot:
+Substitua `'COLE_SEU_TOKEN_AQUI'` no arquivo `index.js` pelo token do seu bot:
 
 ```javascript
 client.login('SEU_TOKEN_REAL_AQUI');
@@ -77,7 +77,7 @@ brew install ffmpeg
 ### 6. Execute o bot
 
 ```bash
-node bot.js
+node index.js
 ```
 
 ## 🔐 Permissões Necessárias
@@ -107,7 +107,7 @@ https://discord.com/api/oauth2/authorize?client_id=SEU_APPLICATION_ID&permission
 
 | Comando | Descrição | Exemplo |
 |---------|-----------|---------|
-| `Bot de Musica [música]` | Toca uma música | `Bot de Musica Bohemian Rhapsody` |
+| `toca aquela [música]` | Toca uma música | `toca aquela Bohemian Rhapsody` |
 | `parar` | Para a música e limpa a fila | `parar` |
 | `pausar` | Pausa ou retoma a música | `pausar` |
 | `pular` ou `skip` | Pula para a próxima música | `pular` |
@@ -133,7 +133,7 @@ https://discord.com/api/oauth2/authorize?client_id=SEU_APPLICATION_ID&permission
 1. **Teste de Conexão:**
 ```bash
 # No terminal
-node bot.js
+node index.js
 # Deve aparecer: "Bot conectado como [Nome]#[Tag]!"
 ```
 
@@ -177,23 +177,23 @@ tocando agora
 6. **Teste de Múltiplas Plataformas:**
 ```bash
 # YouTube (nome)
-Bot de Musica Imagine Dragons Believer
+toca aquela Imagine Dragons Believer
 
 # YouTube (link)
-Bot de Musica https://www.youtube.com/watch?v=dQw4w9WgXcQ
+toca aquela https://www.youtube.com/watch?v=dQw4w9WgXcQ
 
 # Spotify (se disponível)
-Bot de Musica spotify:track:4iV5W9uYEdYUVa79Axb7Rh
+toca aquela spotify:track:4iV5W9uYEdYUVa79Axb7Rh
 ```
 
 7. **Teste de Erros:**
 ```bash
 # Sem estar em canal de voz
-Bot de Musica teste
+toca aquela teste
 # Esperado: "❌ Você precisa estar em um canal de voz..."
 
 # Música inexistente
-Bot de Musica xpto1234567890abcdef
+toca aquela xpto1234567890abcdef
 # Esperado: Mensagem de erro apropriada
 ```
 
@@ -201,7 +201,7 @@ Bot de Musica xpto1234567890abcdef
 
 ```
 cascao-music-bot/
-├── bot.js              # Arquivo principal do bot
+├── index.js              # Arquivo principal do index
 ├── package.json        # Dependências do projeto
 ├── README.md          # Este arquivo
 └── .env.example       # Exemplo de arquivo de ambiente
